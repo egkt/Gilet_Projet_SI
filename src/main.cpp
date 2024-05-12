@@ -58,9 +58,8 @@ void loop() {
   mpu.getEvent(&a, &g, &temp);
 
   //if (g.gyro.x > 4 | g.gyro.y > 4 | g.gyro.z > 4  )
-  if (a.acceleration.x > 3 | a.acceleration.y > 3 |a.acceleration.z > 3  )
-  
-  {
+  if (a.acceleration.x > 15 | a.acceleration.y > 15 | a.acceleration.z > 15 )
+    {
     digitalWrite(Buz,1);
     delay(2000);
     digitalWrite(Buz,0);
